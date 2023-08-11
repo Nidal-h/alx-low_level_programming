@@ -1,29 +1,28 @@
 #include <stdio.h>
 /**
- * main - entry point
- *
- * Return: alway returns 0
- *
+ * main - print all combination of two digit-numbers
+ * Return: return 0 and exit
  */
 int main(void)
 {
-	int i;
-	int j;
+	int n1, n2;
 
-	for (i = 0; i <= 99; i++)
+	for (n1 = 0; n1 <= 99; n1++)
 	{
-		for (j = i + 1; j <= 99; j++)
+		for (n2 = 0; n2 <= 99; n2++)
 		{
-			putchar(i / 10 + '0');
-			putchar(i % 10 + '0');
-			putchar(' ');
-			putchar(j / 10 + '0');
-			putchar(j % 10 + '0');
-
-			if (!(i == 98 && j == 99))
+			if (n1 < n2 && n1 != n2)
 			{
-				putchar(',');
+				putchar((n1 / 10) + '0');
+				putchar((n1 % 10) + '0');
 				putchar(' ');
+				putchar((n2 / 10) + '0');
+				putchar((n2 % 10) + '0');
+				if (n1 != 98 || n2 != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
