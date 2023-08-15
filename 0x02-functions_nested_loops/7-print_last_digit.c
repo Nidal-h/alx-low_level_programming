@@ -1,15 +1,26 @@
-#include "holberton.h"
-#include "6-abs.c"
+#include "main.h"
 /**
- * print_last_digit - main function
+ * print_last_digit - Print last digit of a number
  *
- * @n: integer to get last digit of
- * Return: last digit of n
+ * @a: Type int a and @b type int b
  *
+ * Return: the value of the last digit
  */
 
-int print_last_digit(int n)
+int print_last_digit(int a)
 {
-	_putchar('0' + _abs(n % 10));
-	return (_abs(n % 10));
+	int b;
+
+	if (a < 0)
+	{
+		b = -1 * (a % 10);
+		_putchar(b + '0');
+		return (b);
+	}
+	else
+	{
+		b = a % 10;
+		_putchar(b + '0');
+		return (b);
+	}
 }
