@@ -1,10 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - hash function to implement djb2 algorithm.
- * @str: pointer to null-terminated byte string to be examined.
+ * hash_djb2 - Hash function that implement djb2 algorithm.
+ * @str: Key to aplied the transformation.
  *
- * Return: The new hash.
+ * Return: Integer after the operations.
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
